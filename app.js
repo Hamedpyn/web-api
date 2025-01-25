@@ -25,7 +25,11 @@ const ticketsRoutes = require("./routes/v1/ticket");
 const app = express();
 
 //* CORS Middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https://edu-web-client.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}))
 
 
 //* BodyPaser
