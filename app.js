@@ -45,8 +45,11 @@ app.use(express.json())
 // app.use(setHeaders);
 
 //* Static Folder
-app.use(express.static(path.join(__dirname, "public")));
+// Serve static files from the 'public' folder
+app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve files from the 'courses/covers' subfolder explicitly
+app.use('/courses/covers', express.static(path.join(__dirname, 'public/courses/covers')));
 
 
 //* Routes
