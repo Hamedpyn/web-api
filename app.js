@@ -28,7 +28,8 @@ const app = express();
 app.use(cors({
   origin: ["https://edu-web-client.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ['Authorization', 'Content-Type'],
 }))
 
 
